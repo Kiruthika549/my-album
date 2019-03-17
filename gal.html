@@ -1,0 +1,156 @@
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background:linear-gradient(rgba(0,0,0.5),rgba(0,0,0.5)),url(bg.png);
+}
+
+.slideshow {
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.middle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slide-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.bar {
+  width: 50px;
+  height: 10px;
+  border: 2px solid #fff;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.bar:hover {
+  background: #fff;
+}
+
+input[name="r"]{
+  position: absolute;
+  visibility: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  width: 20%;
+  transition: 0.6s;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+#r1:checked ~ .sl{
+  margin-left: 0;
+}
+#r2:checked ~ .sl{
+  margin-left: -20%;
+}
+#r3:checked ~ .sl{
+  margin-left: -40%;
+}
+#r4:checked ~ .sl{
+  margin-left: -60%;
+}
+#r5:checked ~ .sl{
+  margin-left:-80%;
+}
+#r6:checked ~ .sl{
+  margin-left: -100%;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 24px 106px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+</head>
+<body>
+<ul>
+  <li><a class="active" href="index.html">HOME</a></li>
+  <li><a href="gal.html">GALLERY</a></li>
+  <li><a href="aboutus.html">ABOUT US</a></li>
+   <li><a href="contactus.html">CONTACT US</a></li>
+</ul>
+<div class="slideshow middle">
+  <div class="slides">
+    <input type="radio" name="r" id="r1" checked />
+    <input type="radio" name="r" id="r2" />
+    <input type="radio" name="r" id="r3" />
+    <input type="radio" name="r" id="r4" />
+    <input type="radio" name="r" id="r5" />
+    <div class="slide sl">
+      <img src="1.jpg" alt="picsum" />
+    </div>
+    <div class="slide">
+      <img src="santy.jpg" alt="picsum" />
+    </div>
+    <div class="slide">
+      <img src="2.jpg" alt="picsum" />
+    </div>
+    <div class="slide">
+      <img src="3.jpg" alt="picsum" />
+    </div>
+    <div class="slide">
+      <img src="4.jpg" alt="picsum" />
+    </div>
+<div class="slide">
+      <img src="5.jpg" alt="picsum" />
+    </div>
+<div class="slide">
+      <img src="6.jpg" alt="picsum" />
+    </div>
+  </div>
+  
+  <div class="slide-nav">
+    <label for="r1" class="bar"></label>
+    <label for="r2" class="bar"></label>
+    <label for="r3" class="bar"></label>
+    <label for="r4" class="bar"></label>
+    <label for="r5" class="bar"></label>
+ <label for="r6" class="bar"></label>
+  </div>
+</div>
+</body>
+</html>
+
+
